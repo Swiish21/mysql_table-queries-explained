@@ -345,3 +345,20 @@ show databases;
 
 -- below we are adding(sum) of the values in the unit_price column where the values in the rows of the corresponding table named quantity_in_stock is grater than 30
 -- select sum(unit_price) from products where quantity_in_stock >30;
+
+
+-- below we are gettting the average of the unit_price column values, then counting the no of values in the unit_price column and assigning the name number_of_items_present,
+-- then finding the sum of all the values in the unit_price column and assigning the sum the  name total_unit_price, then we add the name column from the table,
+-- the 'from products' query specifies where we are getting the columns unit_price(used in avg, count and sum operations) and name, 
+-- WHERE quantity_in_stock > 0: Filters the data to include only products with a quantity in stock greater than zero.
+-- GROUP BY name: Groups the results by the name column. This means the calculated values (average, count, and sum) will be computed for each unique name.
+-- ORDER BY average_prices ASC: Sorts the result set in ascending order based on the calculated average_prices column.
+
+-- select
+-- avg(unit_prices) as average_prices,
+-- count(unit_prices) as number_of_items_present,
+-- sum(unit_price) as total_unit_price, name
+-- from products
+-- where quantity_in_stock > 0
+-- group by name
+-- order by average_prices asc;
